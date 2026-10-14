@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Create your AlumniConnect account.">
+	<title>Create Account | AlumniConnect</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/auth.css">
+	<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="auth-page" data-auth-page="register">
+	<main class="auth-layout auth-layout-register">
+		<section class="auth-intro" aria-labelledby="register-intro-title">
+			<a class="brand auth-brand" href="index.html" aria-label="AlumniConnect home">
+				<span class="brand-mark" aria-hidden="true">A</span>
+				<span class="brand-text">AlumniConnect</span>
+			</a>
+			<div class="auth-intro-content">
+				<p class="eyebrow">Your community, in one place</p>
+				<h1 id="register-intro-title">Turn shared history into your next opportunity.</h1>
+				<p>Create a profile that helps classmates find you, makes relevant opportunities easier to discover, and keeps your community close.</p>
+				<ul class="auth-benefits">
+					<li><span aria-hidden="true">&#10003;</span> Discover alumni working in your field</li>
+					<li><span aria-hidden="true">&#10003;</span> Find events, mentors, and new roles</li>
+					<li><span aria-hidden="true">&#10003;</span> Keep your profile in your control</li>
+				</ul>
+			</div>
+			<p class="auth-copyright">AlumniConnect &copy; 2026</p>
+		</section>
+
+		<section class="auth-panel" aria-labelledby="register-title">
+			<div class="auth-form-wrap auth-form-wrap-wide">
+				<div class="auth-mobile-brand">
+					<a class="brand" href="index.html" aria-label="AlumniConnect home">
+						<span class="brand-mark" aria-hidden="true">A</span>
+						<span class="brand-text">AlumniConnect</span>
+					</a>
+				</div>
+				<p class="eyebrow">Join the network</p>
+				<h2 id="register-title">Create your account</h2>
+				<p class="auth-subtitle">It takes less than two minutes to get started.</p>
+				<div id="auth-status" class="auth-status" role="status" aria-live="polite"></div>
+
+				<form id="register-form" class="auth-form" novalidate>
+					<div class="form-grid">
+						<div class="form-group full-width">
+							<label class="form-label" for="register-name">Full name</label>
+							<input class="form-control" id="register-name" name="name" type="text" autocomplete="name" placeholder="Your full name" required>
+							<span class="form-error" id="register-name-error"></span>
+						</div>
+						<div class="form-group">
+							<label class="form-label" for="register-email">Email address</label>
+							<input class="form-control" id="register-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+							<span class="form-error" id="register-email-error"></span>
+						</div>
+						<div class="form-group">
+							<label class="form-label" for="register-year">Graduation year</label>
+							<input class="form-control" id="register-year" name="graduationYear" type="number" min="1950" max="2030" placeholder="2024" required>
+							<span class="form-error" id="register-year-error"></span>
+						</div>
+						<div class="form-group">
+							<label class="form-label" for="register-password">Password</label>
+							<div class="password-field">
+								<input class="form-control" id="register-password" name="password" type="password" autocomplete="new-password" placeholder="At least 6 characters" required>
+								<button class="password-toggle" type="button" data-password-target="register-password" aria-label="Show password">Show</button>
+							</div>
+							<span class="form-error" id="register-password-error"></span>
+						</div>
+						<div class="form-group">
+							<label class="form-label" for="register-confirm-password">Confirm password</label>
+							<input class="form-control" id="register-confirm-password" name="confirmPassword" type="password" autocomplete="new-password" placeholder="Repeat your password" required>
+							<span class="form-error" id="register-confirm-password-error"></span>
+						</div>
+						<div class="form-group">
+							<label class="form-label" for="register-department">Department</label>
+							<input class="form-control" id="register-department" name="department" type="text" placeholder="Computer Science" required>
+							<span class="form-error" id="register-department-error"></span>
+						</div>
+						<div class="form-group">
+							<label class="form-label" for="register-city">Current city</label>
+							<input class="form-control" id="register-city" name="city" type="text" placeholder="Bengaluru" required>
+							<span class="form-error" id="register-city-error"></span>
+						</div>
+						<div class="form-group full-width">
+							<label class="form-label" for="register-role">Current job or role</label>
+							<input class="form-control" id="register-role" name="role" type="text" placeholder="Product Designer" required>
+							<span class="form-error" id="register-role-error"></span>
+						</div>
+					</div>
+					<button class="button button-primary auth-submit" type="submit">Create account <span aria-hidden="true">&rarr;</span></button>
+				</form>
+				<p class="auth-switch">Already have an account? <a href="login.html">Sign in</a></p>
+			</div>
+		</section>
+	</main>
+	<script src="js/storage.js"></script>
+	<script src="js/auth.js"></script>
+</body>
+</html>

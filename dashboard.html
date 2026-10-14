@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Your AlumniConnect dashboard.">
+	<title>Dashboard | AlumniConnect</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/dashboard.css">
+	<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-protected-page="true" data-page="dashboard">
+	<div class="app-shell">
+		<aside class="sidebar" aria-label="Main navigation">
+			<a class="brand" href="dashboard.html" aria-label="AlumniConnect dashboard">
+				<span class="brand-mark" aria-hidden="true">A</span>
+				<span class="brand-text">AlumniConnect</span>
+			</a>
+			<p class="nav-label">Workspace</p>
+			<nav class="sidebar-nav">
+				<a class="nav-link active" href="dashboard.html" data-nav-page="dashboard"><span class="nav-icon" aria-hidden="true">&#9632;</span><span class="nav-link-text">Dashboard</span></a>
+				<a class="nav-link" href="profile.html" data-nav-page="profile"><span class="nav-icon" aria-hidden="true">&#9673;</span><span class="nav-link-text">My Profile</span></a>
+				<a class="nav-link" href="alumni.html" data-nav-page="alumni"><span class="nav-icon" aria-hidden="true">&#9822;</span><span class="nav-link-text">Alumni Directory</span></a>
+				<a class="nav-link" href="events.html" data-nav-page="events"><span class="nav-icon" aria-hidden="true">&#9733;</span><span class="nav-link-text">Events</span></a>
+				<a class="nav-link" href="jobs.html" data-nav-page="jobs"><span class="nav-icon" aria-hidden="true">&#9881;</span><span class="nav-link-text">Jobs</span></a>
+				<a class="nav-link" href="messages.html" data-nav-page="messages"><span class="nav-icon" aria-hidden="true">&#9993;</span><span class="nav-link-text">Messages</span></a>
+				<a class="nav-link" href="notifications.html" data-nav-page="notifications"><span class="nav-icon" aria-hidden="true">&#9679;</span><span class="nav-link-text">Notifications <span class="nav-count" data-notification-count></span></span></a>
+				<a class="nav-link" href="settings.html" data-nav-page="settings"><span class="nav-icon" aria-hidden="true">&#9881;</span><span class="nav-link-text">Settings</span></a>
+			</nav>
+			<div class="sidebar-footer">
+				<button class="nav-link logout-button" type="button"><span class="nav-icon" aria-hidden="true">&#8594;</span><span class="nav-link-text">Logout</span></button>
+			</div>
+		</aside>
+
+		<div class="main-content">
+			<header class="topbar">
+				<div>
+					<span class="topbar-kicker">Tuesday, October 7, 2026</span>
+					<strong class="topbar-title">Community workspace</strong>
+				</div>
+				<div class="topbar-actions">
+					<label class="visually-hidden" for="global-search">Search AlumniConnect</label>
+					<input class="search-field topbar-search" id="global-search" type="search" placeholder="Search the network">
+					<a class="icon-button notification-button" href="notifications.html" aria-label="View notifications"><span aria-hidden="true">&#9679;</span><span class="notification-dot" data-notification-dot></span></a>
+					<a class="user-menu" href="profile.html">
+						<span class="avatar" data-user-avatar aria-hidden="true">RS</span>
+							<span class="user-name" data-user-name>Alumni member</span>
+					</a>
+				</div>
+			</header>
+
+			<main class="page-content">
+				<section class="dashboard-hero" aria-labelledby="welcome-title">
+					<div>
+						<p class="eyebrow">Your network at a glance</p>
+						<h1 id="welcome-title">Welcome back, <span data-welcome-name>Rahul</span>.</h1>
+						<p>Stay close to the people and opportunities shaping your next chapter.</p>
+					</div>
+					<a class="button button-primary" href="alumni.html">Explore alumni <span aria-hidden="true">&rarr;</span></a>
+				</section>
+
+				<section class="grid grid-4 dashboard-stats" aria-label="Network statistics">
+					<article class="card stat-card"><div><span class="stat-label">Total alumni</span><strong class="stat-value" data-stat-alumni>0</strong><span class="stat-trend">Growing community</span></div><span class="stat-icon" aria-hidden="true">&#9822;</span></article>
+					<article class="card stat-card"><div><span class="stat-label">Upcoming events</span><strong class="stat-value" data-stat-events>0</strong><span class="stat-trend">Worth showing up for</span></div><span class="stat-icon stat-icon-green" aria-hidden="true">&#9733;</span></article>
+					<article class="card stat-card"><div><span class="stat-label">Job opportunities</span><strong class="stat-value" data-stat-jobs>0</strong><span class="stat-trend">Shared by alumni</span></div><span class="stat-icon stat-icon-orange" aria-hidden="true">&#9881;</span></article>
+					<article class="card stat-card"><div><span class="stat-label">New messages</span><strong class="stat-value" data-stat-messages>0</strong><span class="stat-trend">People are reaching out</span></div><span class="stat-icon stat-icon-blue" aria-hidden="true">&#9993;</span></article>
+				</section>
+
+				<div class="dashboard-columns">
+					<section class="panel" aria-labelledby="recommended-title">
+						<div class="panel-header"><div><p class="eyebrow">Meet your community</p><h2 id="recommended-title">Recommended alumni</h2></div><a class="text-link" href="alumni.html">View directory &rarr;</a></div>
+						<div class="recommendation-list" data-recommended-list></div>
+					</section>
+					<section class="panel" aria-labelledby="events-title">
+						<div class="panel-header"><div><p class="eyebrow">Keep learning</p><h2 id="events-title">Upcoming events</h2></div><a class="text-link" href="events.html">View all &rarr;</a></div>
+						<div class="dashboard-event-list" data-events-list></div>
+					</section>
+				</div>
+
+				<div class="dashboard-columns dashboard-columns-bottom">
+					<section class="panel" aria-labelledby="jobs-title">
+						<div class="panel-header"><div><p class="eyebrow">Move forward</p><h2 id="jobs-title">Latest opportunities</h2></div><a class="text-link" href="jobs.html">Browse jobs &rarr;</a></div>
+						<div class="dashboard-job-list" data-jobs-list></div>
+					</section>
+					<section class="panel" aria-labelledby="activity-title">
+						<div class="panel-header"><div><p class="eyebrow">What is happening</p><h2 id="activity-title">Recent activity</h2></div><a class="text-link" href="notifications.html">See all &rarr;</a></div>
+						<div class="activity-list" data-activity-list></div>
+					</section>
+				</div>
+			</main>
+		</div>
+	</div>
+	<div class="toast-container" data-toast-container aria-live="polite"></div>
+	<script src="js/storage.js"></script>
+	<script src="js/auth.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/dashboard.js"></script>
+</body>
+</html>
